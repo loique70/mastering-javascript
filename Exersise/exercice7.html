@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice  7</title>
+</head>
+<body>
+    <button onclick="changeTodo()" id="todo-button">Add</button>
+    <div id="counter">0</div>
+    <button onclick="up()" id="up">Up</button>
+    <button onclick="down()" id="down">Down</button>
+    <script>
+        let count = 0
+        function up(){
+            let divVal = document.getElementById('counter')
+            let buttonVa = document.getElementById('up')
+            count = count + 1
+            divVal.innerText = count
+
+        }
+
+        function down(){
+            let divVal = document.getElementById('counter')
+            let buttonVa = document.getElementById('down')
+            count = count - 1
+            divVal.innerText = count
+
+        }
+
+        function changeTodo(){
+            let todo = document.getElementById('todo-button')
+            todo.innerText = 'Done'
+        }
+    </script>
+</body>
+</html>
